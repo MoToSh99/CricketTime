@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/crickettime.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script type="text/javascript" src="js/crickettime.js"></script>
+  <script type="text/javascript" src="js/admob.js"></script>
+</head>
+<body>
+  
+  <ons-page>
+  <ons-toolbar>
+    <div class="center">CricketTime - Live Cricket & News</div>
+  </ons-toolbar>
+
+  <ons-tabbar swipeable position="auto">
+    <ons-tab page="live.html" label="Live Cricket" icon="ion-home, material:fa-video" badge="" active>
+    </ons-tab>
+    <ons-tab page="pointtable.html" label="Point Table" icon="fa-tablets">
+    </ons-tab>
+    <ons-tab page="fixtures.html" label="Upcoming matches" icon="fa-calendar-alt">
+    </ons-tab>
+  </ons-tabbar>
+</ons-page>
+
+<template id="live.html">
+  <ons-page id="live" id="live">
+    	<iframe allowtransparency="true" frameborder="0" src="b.html"  scrolling="yes" style=" width: 100%; height: 100%;  overflow: hidden; background: #FFFFFF;"></iframe>
+ 
+  </ons-page>
+  
+</template>
+
+<template id="pointtable.html">
+  <ons-page id="pointtable">
+  <div class="page__background"></div>  
+    <p style="text-align: center;">
+	
+<iframe style="border: none;width:90%;height:390px" src="https://www.indiatoday.in/live-score/widgets/points_tally_19_wc.html?title=no&amp;viewmore=no&amp;limit=10&amp;site=IT"></iframe>
+	
+    </p>
+  </ons-page>
+</template>
+
+
+
+<template id="fixtures.html">
+  <ons-page id="fixtures"> 
+
+	<div class="page__background"></div>  
+    <p style="text-align: center;">
+	<iframe allowtransparency="true" frameborder="0" src="https://feeds.intoday.in/budget/unionbudget2016/live-score/widgets/latestfixtures.php?type=upcoming&site=1&visiable=1&series=2995&lang=en&limit=&header=1"  scrolling="yes" style=" width: 90%; height: 100vh;  overflow: hidden; background: #FFFFFF;"></iframe>
+    </p>
+  </ons-page>
+</template>
+
+
+
+</body>
+</html>
