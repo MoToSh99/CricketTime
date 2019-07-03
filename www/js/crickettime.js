@@ -46,4 +46,7 @@ document.addEventListener('init', function(event) {
 	}
   });
 
+
+
+
 window.customElements.define('card-element', Card);
