@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/crickettime.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script type="text/javascript" src="js/crickettime.js"></script>
+
+</head>
+<body>
+
+    
+
+      <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator> 
+
+      <template id="page1.html">
+          <ons-page id="page1">
+            <ons-card>
+              <img src="img/engvsnz.png" alt="Match Image" style="width: 100%">
+              <h2 style="text-align: center;"> ENG VS. NZ</h2>
+              <div class="content">
+              
+              <div class="center">
+              <ons-button  id="push-button" modifier="large">Watch Match Live <ons-icon icon="fa-play"></ons-icon></ons-button>
+             
+            </div>
+              </div>
+            </ons-card>
+
+            <!-- 
+            <ons-card>
+                    <img src="img/engvsnz.png" alt="Match Image" style="width: 100%">
+                    <h2 style="text-align: center;"> ENG VS. NZ</h2>
+                    <div class="content">
+                    
+                    <div class="center">
+                    <ons-button  id="push-button2" modifier="large">Watch Match Live <ons-icon icon="fa-play"></ons-icon></ons-button>
+                   
+                  </div>
+                    </div>
+                  </ons-card>
+
+          </ons-page>
+          -->
+        </template>
+
+  <template id="page2.html">
+      <ons-page id="page2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Home</ons-back-button></div>
+      </ons-toolbar>
+    
+      <p style="width:100%"><a class="twitter-timeline" data-link-color="#19CF86" href="https://twitter.com/cricketworldcup?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+      </ons-page>
+    </template> 
+
+    <template id="page3.html">
+            <ons-page id="page3">
+            <ons-toolbar>
+              <div class="left"><ons-back-button>Home</ons-back-button></div>
+            </ons-toolbar>
+            <p>HEJ MED DIg</p>
+          </ons-page>
+          </template> 
+        
+  
+
+
+
+
+
+
+
+</body>
+</html>

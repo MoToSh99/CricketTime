@@ -1,0 +1,68 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-admob-free": {
+            "ADMOB_APP_ID": "ca-app-pub-1857291264243860~4453569619",
+            "PLAY_SERVICES_VERSION": "11.0.4",
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-admobpro": {
+            "PLAY_SERVICES_VERSION": "16.0.0",
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-promise-polyfill": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-admob-sdk": {
+            "PLAY_SERVICES_VERSION": "11.0.4",
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.toheed.crickettime"
+        }
+    }
+}
