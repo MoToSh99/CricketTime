@@ -74,7 +74,7 @@ function initAd(){
             bannerAtTop: false, // set to true, to put banner at top
             overlap: true, // banner will overlap webview
             offsetTopBar: false, // set to true to avoid ios7 status bar overlap
-            isTesting: false, // receiving test ad
+            isTesting: true, // receiving test ad
             autoShow: true // auto show interstitial ad when loaded
         });
 

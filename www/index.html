@@ -7,8 +7,15 @@
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script type="text/javascript" src="http://sportsfalcon.com/crickettime/crickettime.js"></script>
   <script type="text/javascript" src="js/admob.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </head>
-<body onload="">
+<body onload="onload()">
+
+  <script>
+    function onload(){
+      document.addEventListener('deviceready', this.onDeviceReady, false);
+    }
+    </script>
   
   <ons-page>
   <ons-toolbar>
