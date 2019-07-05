@@ -1,71 +1,49 @@
+var admobid = {};
 
-function domLoaded(){
-  document.addEventListener("deviceready", onDeviceReady, false);
-  window.plugins.insomnia.keepAwake()
+// TODO: replace the following ad units with your own
+if( /(android)/i.test(navigator.userAgent) ) {
+  admobid = { // for Android
+    banner: 'ca-app-pub-1857291264243860/7874348995',
+    interstitial: 'ca-app-pub-1857291264243860/6998953855',
+    rewardvideo: '',
+  };
+} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+  admobid = { // for iOS
+    banner: 'ca-app-pub-1857291264243860/7874348995',
+    interstitial: 'ca-app-pub-1857291264243860/6998953855',
+    rewardvideo: 'ca-app-pub-3940256099942544/1712485313',
+  };
+} else {
+  admobid = { // for Windows Phone, deprecated
+    banner: '',
+    interstitial: '',
+    rewardvideo: '',
+  };
 }
- 
- function onDeviceReady(){
-         initAd();
-         showBannerFunc();
-         showInterstitialFunc();
-        alert("device ready");
- }
- 
- 
- 
- 
-   //initialize the goodies
- function initAd(){
-     if ( window.plugins && window.plugins.AdMob ) {
-         var ad_units = {
-             ios : {
-                 banner: 'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx',		//PUT ADMOB ADCODE HERE
-                 interstitial: 'ca-app-pub-xxxxxxxxxxx/xxxxxxxxxxx'	//PUT ADMOB ADCODE HERE
-             },
-             android : {
-                 banner: 'ca-app-pub-1857291264243860/6132433044',		//PUT ADMOB ADCODE HERE
-                 interstitial: 'ca-app-pub-1857291264243860/6998953855'	//PUT ADMOB ADCODE HERE
-             }
-         };
-         var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;
- 
-         window.plugins.AdMob.setOptions( {
-             publisherId: admobid.banner,
-             interstitialAdId: admobid.interstitial,
-             adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,	//use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD
-             bannerAtTop: false, // set to true, to put banner at top
-             overlap: true, // banner will overlap webview
-             offsetTopBar: false, // set to true to avoid ios7 status bar overlap
-             isTesting: false, // receiving test ad
-             autoShow: true // auto show interstitial ad when loaded
-         });
- 
-         registerAdEvents();
-     } else {
-         //alert( 'admob plugin not ready' );
-     }
- }
- //functions to allow you to know when ads are shown, etc.
- function registerAdEvents() {
-     document.addEventListener('onReceiveAd', function(){});
-     document.addEventListener('onFailedToReceiveAd', function(data){});
-     document.addEventListener('onPresentAd', function(){});
-     document.addEventListener('onDismissAd', function(){ });
-     document.addEventListener('onLeaveToAd', function(){ });
-     document.addEventListener('onReceiveInterstitialAd', function(){ });
-     document.addEventListener('onPresentInterstitialAd', function(){ });
-     document.addEventListener('onDismissInterstitialAd', function(){ });
- }
- 
- //Add the following 2 functions and call them when you want ads to show
- //display the banner
- function showBannerFunc(){
- window.plugins.AdMob.createBannerView();
- }
- //display the interstitial
- function showInterstitialFunc(){
- window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown and show when it's loaded.
- window.plugins.AdMob.requestInterstitialAd();
- }
- 
- 
+
+function initApp() {
+  if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+
+  // this will create a banner on startup
+  AdMob.createBanner( {
+    adId: admobid.banner,
+    position: AdMob.AD_POSITION.BOTTOM_CENTER,
+    isTesting: false, // TODO: remove this line when release
+    overlap: false,
+    offsetTopBar: false,
+    bgColor: 'black'
+  } );
+
+  // this will load a full screen ad on startup
+  AdMob.prepareInterstitial({
+    adId: admobid.interstitial,
+    isTesting: false, // TODO: remove this line when release
+    autoShow: true
+  });
+}
+
+if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+    document.addEventListener('deviceready', initApp, false);
+} else {
+    initApp();
+}
