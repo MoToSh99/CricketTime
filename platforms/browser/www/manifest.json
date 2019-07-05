@@ -1,17 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "CricketTime",
-  "short_name": "CricketTime",
+  "name": "CrickeTime",
+  "short_name": "CrickeTime",
   "version": "com.toheed.crickettime",
   "description": "Do you like cricket?\n\tThen CrickeTime is your perfect app to watch live cricket on.\n\tYou can see a pointtable and fixtures of upcoming matches.\n\tFollow the match live now!",
-  "author": "Toheed Sharif.",
-  "icons": [
-    {
-      "src": "icon.png",
-      "type": "image/png",
-      "sizes": "undefinedxundefined"
-    }
-  ],
+  "author": "Toheed Sharif",
+  "icons": [],
   "start_url": "index.html"
 }
