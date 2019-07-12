@@ -1,6 +1,6 @@
-<?xml version='1.04' encoding='utf-8'?>
-<widget id="com.toheed.crickettime" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>CricketTime</name>
+<?xml version='1.05' encoding='utf-8'?>
+<widget id="com.toheed.crickettime" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Live Cricket - HD Streams</name>
     <description>
 	Do you like cricket?
 	Then CrickeTime is your perfect app to watch live cricket on.
